@@ -1,41 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="repository.boxski" name="Boxski Add-on repository" version="1.0.0" provider-name="Boxski">
-  <extension point="xbmc.addon.repository" name="Boxski Add-on repository">
-  <info>https://cdn.rawgit.com/specialk001/boxski-repo/master/addons.xml</info>
-  <checksum>https://cdn.rawgit.com/specialk001/boxski-repo/master/addons.xml.md5</checksum>
-  <datadir zip="true">https://cdn.rawgit.com/specialk001/boxski-repo/blob/master/</datadir>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  <summary>Install Add-ons from Boxski</summary>
-  <description>Download and install add-ons from Boxski repository</description>
-  <disclaimer></disclaimer>
-  <license>GPL</license>
-  <platform>all</platform>
-  <noicon>false</noicon>
-  <nofanart>false</nofanart>
-  </extension>
-</addon>
-<addon
-  id="skin.boxski"
-  version="1.0.0"
-  name="Boxski Skin"
-  provider-name="Boxski">
-  <requires>
-    <import addon="xbmc.gui" version="5.3.0"/>
-  </requires>
-  <extension
-    point="xbmc.gui.skin"
-    defaultthemename="textures.xbt"
-    debugging="false"
-    effectslowdown="0.75">
-    <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
-  </extension>
-  <extension point="xbmc.addon.metadata">
+<addon id="skin.boxski" name="Boxski Skin" version="1.0.0" provider-name="Boxski">
+	<requires>
+		<import addon="xbmc.gui" version="5.3.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.gui.skin" defaultthemename="textures.xbt" debugging="false" effectslowdown="0.75">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
      <summary lang="en">The Boxski skin</summary>
     <description lang="en">Boxski is the default skin for your device</description>
      <disclaimer lang="en">Boxski is the default skin for your device, removing it may cause issues</disclaimer>
     <platform>all</platform>
   </extension>
+</addon>
+
+<addon id="repository.boxski" name="Boxski Add-on repository" version="1.0.0" provider-name="Boxski">
+	<extension point="xbmc.addon.repository" name="Boxski Add-on repository">
+		<dir>
+			<info compressed="false">https://cdn.rawgit.com/specialk001/boxski-repo/master/addons.xml</info>
+			<checksum>https://cdn.rawgit.com/specialk001/boxski-repo/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://cdn.rawgit.com/specialk001/boxski-repo/blob/master/</datadir>
+		</dir>
+		<info compressed="false">https://cdn.rawgit.com/specialk001/boxski-repo/master/addons.xml</info>
+		<checksum>https://cdn.rawgit.com/specialk001/boxski-repo/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://cdn.rawgit.com/specialk001/boxski-repo/blob/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Install Add-ons from Boxski</summary>
+		<description lang="en">Download and install add-ons from the Boxski repository.</description>
+		<platform>all</platform>
+	</extension>
 </addon>
 </addons>
