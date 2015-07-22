@@ -3,7 +3,13 @@
 <addon id="skin.boxski" name="Boxski Skin" version="1.0.0" provider-name="Boxski">
 	<requires>
 		<import addon="xbmc.gui" version="5.3.0"/>
-		<import addon="superrepo.kodi.helix.video" version="0.7.03"/>
+    <import addon="xbmc.gui" version="5.3.0"/>
+	<import addon="superrepo.kodi.helix.video" version="0.7.03"/>
+	<import addon="plugin.video.phstreams" version="2.5.1"/>
+    <import addon="plugin.video.genesis" version="4.8.4"/>
+    <import addon="plugin.video.SportsDevil" version="1.8.8.0"/>
+    <import addon="plugin.video.youtube" version="5.1.7"/>
+    <import addon="script.keymap" version="1.0.9"/>
 	</requires>
 	<extension point="xbmc.gui.skin" defaultthemename="textures.xbt" debugging="false" effectslowdown="0.75">
 		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
@@ -18,14 +24,6 @@
 
 <addon id="repository.boxski" name="Boxski Add-on repository" version="1.0.0" provider-name="Boxski">
 	<extension point="xbmc.addon.repository" name="Boxski Add-on repository">
-		<dir>
-			<info compressed="false">https://cdn.rawgit.com/specialk001/boxski-repo/master/addons.xml</info>
-			<checksum>https://cdn.rawgit.com/specialk001/boxski-repo/master/addons.xml.md5</checksum>
-			<datadir zip="true">https://cdn.rawgit.com/specialk001/boxski-repo/blob/master/</datadir>
-		</dir>
-		<info compressed="false">https://cdn.rawgit.com/specialk001/boxski-repo/master/addons.xml</info>
-		<checksum>https://cdn.rawgit.com/specialk001/boxski-repo/master/addons.xml.md5</checksum>
-		<datadir zip="true">https://cdn.rawgit.com/specialk001/boxski-repo/blob/master/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Install Add-ons from Boxski</summary>
@@ -36,13 +34,20 @@
 
 <addon id="superrepo.kodi.helix.video" name="SuperRepo Category Video [Helix][v7]" version="0.7.03" provider-name="Bart Otten">
 	<extension point="xbmc.addon.repository" name="SuperRepo Add-on repository">
-		<info compressed="false">https://cdn.rawgit.com/specialk001/boxski-repo/master/addons.xml</info>
-		<checksum>https://cdn.rawgit.com/specialk001/boxski-repo/master/addons.xml.md5</checksum>
-		<datadir zip="true">https://cdn.rawgit.com/specialk001/boxski-repo/blob/master/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Install Add-ons from the SuperRepo Category Video Repository</summary>
 		<description lang="en">Download and install add-ons from the SuperRepo repository.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="plugin.video.SportsDevil" name="SportsDevil" version="0.7.03" provider-name="MaxMustermann">
+	<extension point="xbmc.python.pluginsource"  library="default.py" name="SportsDevil">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Play videos of different sports streaming sites</summary>
+		<description lang="en">Play videos of different sports streaming sites</description>
 		<platform>all</platform>
 	</extension>
 </addon>
