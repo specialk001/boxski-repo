@@ -35,8 +35,9 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.SportsDevil" name="SportsDevil" version="0.7.03" provider-name="MaxMustermann">
+<addon id="plugin.video.SportsDevil" name="SportsDevil" version="1.8.8.0" provider-name="MaxMustermann">
 	<extension point="xbmc.python.pluginsource"  library="default.py" name="SportsDevil">
+		<provides>video</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Play videos of different sports streaming sites</summary>
